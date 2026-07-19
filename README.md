@@ -1,16 +1,16 @@
----
-frameworks:
-- 其他
-license: Apache License 2.0
-tasks:
-- keyword-spotting
----
+# React + Vite
 
-sherpa 中自定义唤醒词模型，训练数据为 gigaspeech XL （10000 小时）数据，模型大小约为 3.3 M， 建模单元为 BPE 。 使用 icefall 训练，已转换为 onnx 格式，此仓库主要是给 sherpa-onnx 这个 inference 引擎使用。
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-模型结构为 zipformer 模型， 本质是一个非常小的语音识别模型，为了实现唤醒词的功能，我们在解码端做了一些修改和约束。 支持自定义唤醒词，数量不限，效果需要单个调整参数。
+Currently, two official plugins are available:
 
-#### Clone with HTTP
-```bash
- git clone https://www.modelscope.cn/pkufool/sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01.git
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
